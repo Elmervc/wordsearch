@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Words {
         public static List<String> get(int letter){
-          System.out.println("reading " + "/EOWL-wordlist/" + letter + ".tbl");
+          System.out.println("reading " + "./" + letter + ".tbl");
           InputStream in = utils.EmailServlet.class.getResourceAsStream("/" + letter + ".tbl");
           InputStreamReader i=null;
           BufferedReader r=null;
@@ -25,7 +25,7 @@ public class Words {
           String s = null;
           try {
             while ((s=r.readLine())!=null) {
-              list.add(s);//new String(s.getBytes("ISO-8859-1"), "UTF-8"));
+              list.add(s);
             }
           }
           catch (IOException e) { e.printStackTrace(); }
