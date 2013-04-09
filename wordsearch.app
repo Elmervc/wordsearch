@@ -123,7 +123,7 @@ entity Term {
   }
 }
 
-native class Words{
+native class wordsearch.Words as Words{
   static get(Int) : List<String>
 }
 
